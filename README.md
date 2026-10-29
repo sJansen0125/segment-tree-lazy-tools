@@ -54,3 +54,10 @@ The `monoid` argument requires four fields:
 ## Testing
 
 Tests run under `node --test` using `node:test` and `node:assert/strict`. The suite covers initial-state queries, single and overlapping range updates, point get/set after pending updates, assign-and-min behaviour, out-of-bounds rejection, and a fuzz-style comparison against a brute-force reference over 200 random small arrays with a fixed seed.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
