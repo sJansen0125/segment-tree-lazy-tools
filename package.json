@@ -1,6 +1,6 @@
 {
   "name": "segment-tree-lazy-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript segment tree with lazy propagation for range updates and queries.",
   "type": "module",
   "main": "src/index.js",
